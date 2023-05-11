@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+compileJava.options.encoding('UTF-8')
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly files('C:/API/pandaspigot-server-1.8.8-R0.1-SNAPSHOT.jar')
+}
+
+tasks.register('copyJar', Copy) {
+    from 'build/libs/revisao-1.0-SNAPSHOT.jar'
+    into 'C:/Users/Cassio/Desktop/Panda Server/plugins/'
+}
